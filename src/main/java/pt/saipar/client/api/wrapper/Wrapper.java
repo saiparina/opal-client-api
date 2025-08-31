@@ -1,9 +1,9 @@
 package pt.saipar.client.api.wrapper;
 
+import pt.saipar.client.api.ui.font.renderer.FontRenderer;
 import pt.saipar.client.api.wrapper.entity.impl.PlayerWrapper;
 import pt.saipar.client.api.wrapper.network.NetworkManagerWrapper;
 import pt.saipar.client.api.wrapper.settings.SettingsWrapper;
-import pt.saipar.client.api.wrapper.ui.font.FontWrapper;
 import pt.saipar.client.api.wrapper.world.WorldWrapper;
 
 public interface Wrapper {
@@ -13,7 +13,7 @@ public interface Wrapper {
      *
      * @return the {@link NetworkManagerWrapper}
      */
-    NetworkManagerWrapper getNeworkManager();
+    NetworkManagerWrapper getNetworkManager();
 
     /**
      * Gets the game's {@link SettingsWrapper}
@@ -37,11 +37,11 @@ public interface Wrapper {
     WorldWrapper getWorld();
 
     /**
-     * Gets the minecraft {@link FontWrapper}
+     * Gets the minecraft {@link FontRenderer}
      *
-     * @return the {@link FontWrapper}
+     * @return the {@link FontRenderer}
      */
-    FontWrapper getFont();
+    FontRenderer getFont();
 
     /**
      * Presses the left mouse button

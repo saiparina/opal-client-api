@@ -4,6 +4,7 @@ import pt.saipar.client.api.accessor.OpalAccessor;
 import pt.saipar.client.api.event.manager.EventManager;
 import pt.saipar.client.api.friend.FriendManager;
 import pt.saipar.client.api.logger.manager.LoggerManager;
+import pt.saipar.client.api.ui.font.FontManager;
 import pt.saipar.client.api.wrapper.Wrapper;
 
 public interface OpalAPI {
@@ -11,6 +12,8 @@ public interface OpalAPI {
     OpalAccessor ACCESSOR = new OpalAccessor();
 
     LoggerManager getLoggerManager();
+
+    FontManager getFontManager();
 
     EventManager getEventManager();
 

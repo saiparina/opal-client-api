@@ -1,8 +1,8 @@
-package pt.saipar.client.api.wrapper.ui.font;
+package pt.saipar.client.api.ui.font.renderer;
 
 import java.awt.*;
 
-public interface FontWrapper {
+public interface FontRenderer {
 
     /**
      * Draws a {@link String} at a given position with a given {@link Color}
@@ -25,7 +25,7 @@ public interface FontWrapper {
     void drawStringWithShadow(final String text, final int x, final int y, final Color color);
 
     /**
-     * Gets the height of the {@link FontWrapper}
+     * Gets the height of the {@link FontRenderer}
      *
      * @return the height
      */
