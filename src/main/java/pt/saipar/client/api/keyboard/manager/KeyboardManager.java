@@ -15,6 +15,14 @@ public interface KeyboardManager {
     Optional<Key> from(final int code);
 
     /**
+     * Gets a {@link Key} from its name
+     *
+     * @param name the name of the {@link Key}
+     * @return an {@link Optional} of the {@link Key}
+     */
+    Optional<Key> from(final String name);
+
+    /**
      * Whether the {@link Key} is being pressed
      *
      * @param key the {@link Key}

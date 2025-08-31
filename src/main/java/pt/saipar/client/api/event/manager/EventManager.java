@@ -6,6 +6,14 @@ import pt.saipar.client.api.event.listener.event.EventListener;
 public interface EventManager {
 
     /**
+     * Creates an {@link Event} instance from its {@link Class}
+     *
+     * @param eventClass the {@link Class} of the {@link Event}
+     * @return the {@link Event}
+     */
+    <T extends Event> T create(final Class<T> eventClass);
+
+    /**
      * Registers an {@link EventListener}
      *
      * @param listener the {@link EventListener}

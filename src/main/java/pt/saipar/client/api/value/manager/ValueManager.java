@@ -1,5 +1,6 @@
 package pt.saipar.client.api.value.manager;
 
+import com.google.gson.JsonObject;
 import pt.saipar.client.api.value.Value;
 
 import java.lang.reflect.Field;
@@ -65,5 +66,7 @@ public interface ValueManager {
      * @param result the result for the {@link Value}
      */
     void set(final Object parent, final Value value, final String result);
+
+    JsonObject getJson(final Object parent);
 
 }
