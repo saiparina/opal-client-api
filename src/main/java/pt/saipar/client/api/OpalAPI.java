@@ -6,6 +6,7 @@ import pt.saipar.client.api.keyboard.manager.KeyboardManager;
 import pt.saipar.client.api.logger.manager.LoggerManager;
 import pt.saipar.client.api.module.manager.ModuleManager;
 import pt.saipar.client.api.ui.font.FontManager;
+import pt.saipar.client.api.ui.notification.manager.NotificationManager;
 import pt.saipar.client.api.value.manager.ValueManager;
 import pt.saipar.client.api.wrapper.Wrapper;
 
@@ -32,6 +33,11 @@ public interface OpalAPI {
 
         @Override
         public KeyboardManager getKeyboardManager() {
+            return null;
+        }
+
+        @Override
+        public NotificationManager getNotificationManager() {
             return null;
         }
 
@@ -63,6 +69,8 @@ public interface OpalAPI {
     EventManager getEventManager();
 
     KeyboardManager getKeyboardManager();
+
+    NotificationManager getNotificationManager();
 
     ValueManager getValueManager();
 
