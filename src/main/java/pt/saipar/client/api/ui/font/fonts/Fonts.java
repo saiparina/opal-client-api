@@ -13,7 +13,7 @@ public enum Fonts {
     private final String name;
 
     public FontRenderer withSize(final int size) {
-        return OpalAPI.get().getFontManager().get(name, size);
+        return OpalAPI.INSTANCE.getFontManager().get(name, size);
     }
 
 }

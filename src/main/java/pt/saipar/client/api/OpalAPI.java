@@ -1,15 +1,48 @@
 package pt.saipar.client.api;
 
-import pt.saipar.client.api.accessor.OpalAccessor;
 import pt.saipar.client.api.event.manager.EventManager;
 import pt.saipar.client.api.friend.FriendManager;
+import pt.saipar.client.api.keyboard.manager.KeyboardManager;
 import pt.saipar.client.api.logger.manager.LoggerManager;
 import pt.saipar.client.api.ui.font.FontManager;
 import pt.saipar.client.api.wrapper.Wrapper;
 
 public interface OpalAPI {
 
-    OpalAccessor ACCESSOR = new OpalAccessor();
+    /**
+     * This will be injected later on
+     */
+    OpalAPI INSTANCE = new OpalAPI() {
+        @Override
+        public LoggerManager getLoggerManager() {
+            return null;
+        }
+
+        @Override
+        public FontManager getFontManager() {
+            return null;
+        }
+
+        @Override
+        public EventManager getEventManager() {
+            return null;
+        }
+
+        @Override
+        public KeyboardManager getKeyboardManager() {
+            return null;
+        }
+
+        @Override
+        public FriendManager getFriendManager() {
+            return null;
+        }
+
+        @Override
+        public Wrapper getWrapper() {
+            return null;
+        }
+    };
 
     LoggerManager getLoggerManager();
 
@@ -17,12 +50,10 @@ public interface OpalAPI {
 
     EventManager getEventManager();
 
+    KeyboardManager getKeyboardManager();
+
     FriendManager getFriendManager();
 
     Wrapper getWrapper();
-
-    static OpalAPI get() {
-        return ACCESSOR.getInstance();
-    }
 
 }

@@ -23,7 +23,7 @@ public final class Rotation {
     }
 
     public Rotation normalize() {
-        final float sensitivity = OpalAPI.get().getWrapper().getSettings().getSensitivity();
+        final float sensitivity = OpalAPI.INSTANCE.getWrapper().getSettings().getSensitivity();
         final float factor = sensitivity * 0.6f + 0.2f;
         final float modulo = factor * factor * factor * 1.2f;
 

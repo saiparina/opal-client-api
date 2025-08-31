@@ -21,7 +21,7 @@ public enum Logger {
      * @param objects the objects that are going to be formatted
      */
     public void log(final String message, final Object... objects) {
-        OpalAPI.get().getLoggerManager().queue(this, String.format(message, objects));
+        OpalAPI.INSTANCE.getLoggerManager().queue(this, String.format(message, objects));
     }
 
 }
