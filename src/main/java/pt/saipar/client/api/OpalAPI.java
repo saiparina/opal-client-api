@@ -5,6 +5,7 @@ import pt.saipar.client.api.friend.FriendManager;
 import pt.saipar.client.api.keyboard.manager.KeyboardManager;
 import pt.saipar.client.api.logger.manager.LoggerManager;
 import pt.saipar.client.api.ui.font.FontManager;
+import pt.saipar.client.api.value.manager.ValueManager;
 import pt.saipar.client.api.wrapper.Wrapper;
 
 public interface OpalAPI {
@@ -34,6 +35,11 @@ public interface OpalAPI {
         }
 
         @Override
+        public ValueManager getValueManager() {
+            return null;
+        }
+
+        @Override
         public FriendManager getFriendManager() {
             return null;
         }
@@ -51,6 +57,8 @@ public interface OpalAPI {
     EventManager getEventManager();
 
     KeyboardManager getKeyboardManager();
+
+    ValueManager getValueManager();
 
     FriendManager getFriendManager();
 
