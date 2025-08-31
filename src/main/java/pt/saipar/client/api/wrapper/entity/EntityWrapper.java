@@ -1,0 +1,72 @@
+package pt.saipar.client.api.wrapper.entity;
+
+import pt.saipar.client.api.utils.location.Location;
+import pt.saipar.client.api.utils.rotation.Rotation;
+
+public interface EntityWrapper {
+
+    /**
+     * Gets the name of the {@link EntityWrapper}
+     *
+     * @return the name of the {@link EntityWrapper}
+     */
+    String getName();
+
+    /**
+     * Gets the {@link EntityWrapper}'s {@link Location}
+     *
+     * @return the {@link EntityWrapper}'s {@link Location}
+     */
+    Location getLocation();
+
+    /**
+     * Gets the {@link EntityWrapper}'s {@link Rotation}
+     *
+     * @return the {@link EntityWrapper}'s {@link Rotation}
+     */
+    Rotation getRotation();
+
+    /**
+     * Gets the X value of the {@link EntityWrapper}'s motion
+     *
+     * @return the X value of the {@link EntityWrapper}'s motion
+     */
+    double getMotionX();
+
+    /**
+     * Gets the Y value of the {@link EntityWrapper}'s motion
+     *
+     * @return the Y value of the {@link EntityWrapper}'s motion
+     */
+    double getMotionY();
+
+    /**
+     * Gets the Z value of the {@link EntityWrapper}'s motion
+     *
+     * @return the Z value of the {@link EntityWrapper}'s motion
+     */
+    double getMotionZ();
+
+    /**
+     * Whether the {@link EntityWrapper} is sprinting
+     *
+     * @return the sprinting state of the {@link EntityWrapper}
+     */
+    boolean isSprinting();
+
+    /**
+     * Whether the {@link EntityWrapper} is sneaking
+     *
+     * @return the sneaking state of the {@link EntityWrapper}
+     */
+    boolean isSneaking();
+
+    /**
+     * Gets the distance between two {@link EntityWrapper}.
+     *
+     * @param entity the other {@link EntityWrapper}
+     * @return the distance between the entities
+     */
+    double getDistance(final EntityWrapper entity);
+
+}
