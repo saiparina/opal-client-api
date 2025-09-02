@@ -2,7 +2,7 @@ package pt.saipar.client.api.wrapper.network.packet.impl.client;
 
 import pt.saipar.client.api.wrapper.network.packet.PacketWrapper;
 
-public interface EntityActionPacketWrapper<T> extends PacketWrapper<T> {
+public interface EntityActionClientPacketWrapper<T> extends PacketWrapper<T> {
 
     /**
      * Sets the ID of the entity
@@ -19,7 +19,7 @@ public interface EntityActionPacketWrapper<T> extends PacketWrapper<T> {
     int getEntityId();
 
     /**
-     * Sets the {@link Action} of the {@link EntityActionPacketWrapper}
+     * Sets the {@link Action} of the {@link EntityActionClientPacketWrapper}
      *
      * @param action the {@link Action}
      */
