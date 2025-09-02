@@ -9,6 +9,8 @@ public interface SettingsWrapper {
 
     float getSensitivity();
 
+    KeyBindWrapper getUseKeyBind();
+
     KeyBindWrapper getSprintKeyBind();
 
 }

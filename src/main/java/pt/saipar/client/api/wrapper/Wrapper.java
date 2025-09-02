@@ -2,6 +2,7 @@ package pt.saipar.client.api.wrapper;
 
 import pt.saipar.client.api.ui.font.renderer.FontRenderer;
 import pt.saipar.client.api.wrapper.entity.impl.PlayerWrapper;
+import pt.saipar.client.api.wrapper.inventory.InventoryWrapper;
 import pt.saipar.client.api.wrapper.network.NetworkManagerWrapper;
 import pt.saipar.client.api.wrapper.render.manager.RenderManagerWrapper;
 import pt.saipar.client.api.wrapper.settings.SettingsWrapper;
@@ -30,6 +31,13 @@ public interface Wrapper {
      * @return the {@link PlayerWrapper}
      */
     PlayerWrapper getPlayer();
+
+    /**
+     * Gets the {@link InventoryWrapper}
+     *
+     * @return the {@link InventoryWrapper}
+     */
+    InventoryWrapper getInventory();
 
     /**
      * Gets the {@link WorldWrapper}

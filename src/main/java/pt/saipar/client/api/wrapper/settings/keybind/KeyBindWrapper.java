@@ -6,4 +6,6 @@ public interface KeyBindWrapper {
 
     boolean isPressed();
 
+    void tick();
+
 }
