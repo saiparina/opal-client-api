@@ -41,6 +41,14 @@ public interface NetworkManagerWrapper {
     /**
      * Creates a {@link PacketBufferWrapper}
      *
+     * @param data the data as an array of bytes
+     * @return the {@link PacketBufferWrapper}
+     */
+    PacketBufferWrapper createBuffer(final byte[] data);
+
+    /**
+     * Creates a {@link PacketBufferWrapper}
+     *
      * @return the {@link PacketBufferWrapper}
      */
     PacketBufferWrapper createBuffer();
