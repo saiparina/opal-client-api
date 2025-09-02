@@ -6,10 +6,10 @@ import pt.saipar.client.api.event.Event;
 public interface Listener<E extends Event> {
 
     /**
-     * Fires a {@link Event}
+     * Processes a {@link Event}
      *
      * @param event the {@link Event}
      */
-    void fire(final E event);
+    void process(final E event);
 
 }

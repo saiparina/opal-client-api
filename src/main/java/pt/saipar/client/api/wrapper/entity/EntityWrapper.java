@@ -6,11 +6,25 @@ import pt.saipar.client.api.utils.rotation.Rotation;
 public interface EntityWrapper {
 
     /**
+     * Gets the id of the {@link EntityWrapper}
+     *
+     * @return the id of the {@link EntityWrapper}
+     */
+    int getId();
+
+    /**
      * Gets the name of the {@link EntityWrapper}
      *
      * @return the name of the {@link EntityWrapper}
      */
     String getName();
+
+    /**
+     * Gets the display name of the {@link EntityWrapper}
+     *
+     * @return the display name of the {@link EntityWrapper}
+     */
+    String getDisplayName();
 
     /**
      * Gets the {@link EntityWrapper}'s {@link Location}
@@ -20,6 +34,13 @@ public interface EntityWrapper {
     Location getLocation();
 
     /**
+     * Gets the {@link EntityWrapper}'s last tick {@link Location}
+     *
+     * @return the last tick {@link Location}
+     */
+    Location getLastTickLocation();
+
+    /**
      * Gets the {@link EntityWrapper}'s {@link Rotation}
      *
      * @return the {@link EntityWrapper}'s {@link Rotation}
@@ -27,25 +48,25 @@ public interface EntityWrapper {
     Rotation getRotation();
 
     /**
-     * Gets the X value of the {@link EntityWrapper}'s motion
+     * Gets the X value of the {@link EntityWrapper}'s delta
      *
-     * @return the X value of the {@link EntityWrapper}'s motion
+     * @return the X value of the {@link EntityWrapper}'s delta
      */
-    double getMotionX();
+    double getDeltaX();
 
     /**
-     * Gets the Y value of the {@link EntityWrapper}'s motion
+     * Gets the Y value of the {@link EntityWrapper}'s delta
      *
-     * @return the Y value of the {@link EntityWrapper}'s motion
+     * @return the Y value of the {@link EntityWrapper}'s delta
      */
-    double getMotionY();
+    double getDeltaY();
 
     /**
-     * Gets the Z value of the {@link EntityWrapper}'s motion
+     * Gets the Z value of the {@link EntityWrapper}'s delta
      *
-     * @return the Z value of the {@link EntityWrapper}'s motion
+     * @return the Z value of the {@link EntityWrapper}'s delta
      */
-    double getMotionZ();
+    double getDeltaZ();
 
     /**
      * Whether the {@link EntityWrapper} is sprinting
@@ -60,6 +81,13 @@ public interface EntityWrapper {
      * @return the sneaking state of the {@link EntityWrapper}
      */
     boolean isSneaking();
+
+    /**
+     * Whether the {@link EntityWrapper} is a player
+     *
+     * @return whether the {@link EntityWrapper} is a player
+     */
+    boolean isPlayer();
 
     /**
      * Gets the distance between two {@link EntityWrapper}.

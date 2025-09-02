@@ -3,7 +3,9 @@ package pt.saipar.client.api.wrapper;
 import pt.saipar.client.api.ui.font.renderer.FontRenderer;
 import pt.saipar.client.api.wrapper.entity.impl.PlayerWrapper;
 import pt.saipar.client.api.wrapper.network.NetworkManagerWrapper;
+import pt.saipar.client.api.wrapper.render.manager.RenderManagerWrapper;
 import pt.saipar.client.api.wrapper.settings.SettingsWrapper;
+import pt.saipar.client.api.wrapper.util.timer.TimerWrapper;
 import pt.saipar.client.api.wrapper.world.WorldWrapper;
 
 public interface Wrapper {
@@ -42,6 +44,20 @@ public interface Wrapper {
      * @return the {@link FontRenderer}
      */
     FontRenderer getFont();
+
+    /**
+     * Gets the minecraft {@link RenderManagerWrapper}
+     *
+     * @return the {@link RenderManagerWrapper}
+     */
+    RenderManagerWrapper getRenderManager();
+
+    /**
+     * Gets the minecraft {@link TimerWrapper}
+     *
+     * @return the {@link TimerWrapper}
+     */
+    TimerWrapper getTimer();
 
     /**
      * Presses the left mouse button
