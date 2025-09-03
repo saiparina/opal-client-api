@@ -18,6 +18,13 @@ public final class Rotation {
         return this;
     }
 
+    public Rotation setTo(final Rotation rotation) {
+        yaw = rotation.getYaw();
+        pitch = rotation.getPitch();
+
+        return this;
+    }
+
     public Rotation add(final Rotation rotation) {
         return this.add(rotation.getYaw(), rotation.getPitch());
     }

@@ -41,6 +41,13 @@ public interface EntityWrapper {
     Location getLastTickLocation();
 
     /**
+     * Looks at a {@link Rotation}
+     *
+     * @param rotation the {@link Rotation}
+     */
+    void lookAt(final Rotation rotation);
+
+    /**
      * Gets the {@link EntityWrapper}'s {@link Rotation}
      *
      * @return the {@link EntityWrapper}'s {@link Rotation}
