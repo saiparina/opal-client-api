@@ -1,4 +1,4 @@
-package pt.saipar.client.api.wrapper.util.timer;
+package pt.saipar.client.api.wrapper.utils.timer;
 
 public interface TimerWrapper {
 

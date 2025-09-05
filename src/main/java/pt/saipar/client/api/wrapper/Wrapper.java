@@ -6,7 +6,7 @@ import pt.saipar.client.api.wrapper.inventory.InventoryWrapper;
 import pt.saipar.client.api.wrapper.network.NetworkManagerWrapper;
 import pt.saipar.client.api.wrapper.render.manager.RenderManagerWrapper;
 import pt.saipar.client.api.wrapper.settings.SettingsWrapper;
-import pt.saipar.client.api.wrapper.util.timer.TimerWrapper;
+import pt.saipar.client.api.wrapper.utils.timer.TimerWrapper;
 import pt.saipar.client.api.wrapper.world.WorldWrapper;
 
 public interface Wrapper {

@@ -1,4 +1,4 @@
-package pt.saipar.client.api.wrapper.util.buffer;
+package pt.saipar.client.api.wrapper.utils.buffer;
 
 public interface PacketBufferWrapper {
 
