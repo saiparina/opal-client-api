@@ -3,6 +3,7 @@ package pt.saipar.client.api.command.manager;
 import pt.saipar.client.api.command.Command;
 import pt.saipar.client.api.command.subcommand.SubCommand;
 
+import java.util.Collection;
 import java.util.Optional;
 
 public interface CommandManager {
@@ -40,5 +41,7 @@ public interface CommandManager {
     <T extends Command> T get(final Class<T> commandClass);
 
     Optional<SubCommand<?>> getSubCommand(final Command parent, final String alias);
+
+    Collection<Command> getCommands();
 
 }

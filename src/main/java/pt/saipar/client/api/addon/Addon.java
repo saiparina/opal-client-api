@@ -1,12 +1,23 @@
 package pt.saipar.client.api.addon;
 
 import lombok.Getter;
+import lombok.Setter;
 import pt.saipar.client.api.addon.data.AddonData;
+import pt.saipar.client.api.command.Command;
+import pt.saipar.client.api.module.Module;
+import pt.saipar.client.api.utils.map.ClassMap;
 
-@Getter
+import java.io.File;
+
+@Getter @Setter
 public abstract class Addon {
 
+    private final ClassMap<Module> modules = new ClassMap<>();
+    private final ClassMap<Command> commands = new ClassMap<>();
+
     private final String name;
+
+    private File file;
 
     public Addon() {
         final AddonData data = this.getClass().getAnnotation(AddonData.class);
