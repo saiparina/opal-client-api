@@ -11,4 +11,6 @@ public interface RenderNameTagEvent extends Event {
 
     String getName();
 
+    boolean isPlayer();
+
 }
