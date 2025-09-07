@@ -2,8 +2,10 @@ package pt.saipar.client.api.wrapper.entity.impl;
 
 import pt.saipar.client.api.wrapper.entity.EntityWrapper;
 
-public interface LivingEntityWrapper extends AbstractLivingEntityWrapper {
+public interface ArrowWrapper extends EntityWrapper {
 
-    EntityWrapper getLeashedTo();
+    EntityWrapper getShooter();
+
+    boolean isOnGround();
 
 }

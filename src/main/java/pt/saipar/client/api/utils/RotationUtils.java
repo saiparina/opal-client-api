@@ -15,7 +15,7 @@ public final class RotationUtils {
                 positionVec = position.clone();
         final Location difference = positionVec.subtract(originVec);
 
-        final double distance = difference.flat().length();
+        final double distance = difference.clone().flat().length();
 
         return new Rotation(
                 (float) (Math.toDegrees(Math.atan2(difference.getZ(), difference.getX())) - 90.0f),

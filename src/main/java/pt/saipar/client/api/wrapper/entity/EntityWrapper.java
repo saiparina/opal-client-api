@@ -6,6 +6,22 @@ import pt.saipar.client.api.utils.rotation.Rotation;
 public interface EntityWrapper {
 
     /**
+     * Whether this {@link EntityWrapper} is an instance of a {@link Class} of another {@link EntityWrapper}
+     *
+     * @param entityClass the {@link Class} of the desired {@link EntityWrapper}
+     * @return whether this {@link EntityWrapper} is a valid instance
+     */
+    boolean isInstance(final Class<?> entityClass);
+
+    /**
+     * Casts a {@link EntityWrapper} to another {@link Class}
+     *
+     * @param entityClass the {@link Class}
+     * @return the casted {@link EntityWrapper}
+     */
+    <T extends EntityWrapper> T cast(final Class<T> entityClass);
+
+    /**
      * Gets the id of the {@link EntityWrapper}
      *
      * @return the id of the {@link EntityWrapper}
@@ -90,11 +106,18 @@ public interface EntityWrapper {
     boolean isSneaking();
 
     /**
-     * Whether the {@link EntityWrapper} is a player
+     * Gets the {@link EntityWrapper} this {@link EntityWrapper} is riding
      *
-     * @return whether the {@link EntityWrapper} is a player
+     * @return the {@link EntityWrapper} this {@link EntityWrapper} is riding
      */
-    boolean isPlayer();
+    EntityWrapper getRiding();
+
+    /**
+     * Gets the {@link EntityWrapper} whose this {@link EntityWrapper} is being ridden
+     *
+     * @return the {@link EntityWrapper} whose this {@link EntityWrapper} is being ridden
+     */
+    EntityWrapper getRidden();
 
     /**
      * Gets the distance between two {@link EntityWrapper}.
