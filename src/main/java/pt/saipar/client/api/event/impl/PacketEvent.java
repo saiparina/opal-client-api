@@ -7,4 +7,20 @@ public interface PacketEvent extends Event {
 
     PacketWrapper<?> getPacket();
 
+    interface Encode extends PacketEvent {
+
+        void setId(final int id);
+
+        int getId();
+
+    }
+
+    interface Decode extends PacketEvent {
+
+        void setId(final int id);
+
+        int getId();
+
+    }
+
 }
