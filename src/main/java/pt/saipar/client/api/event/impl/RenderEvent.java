@@ -14,9 +14,6 @@ public interface RenderEvent extends Event {
     }
 
     interface Game extends RenderEvent {
-
-
-
     }
 
 }
