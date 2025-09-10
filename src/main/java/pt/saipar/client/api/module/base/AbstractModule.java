@@ -3,6 +3,7 @@ package pt.saipar.client.api.module.base;
 import lombok.Getter;
 import pt.saipar.client.api.OpalAPI;
 import pt.saipar.client.api.event.listener.event.EventListener;
+import pt.saipar.client.api.utils.FormatUtils;
 import pt.saipar.client.api.wrapper.Wrapper;
 
 @Getter
@@ -15,7 +16,7 @@ public abstract class AbstractModule implements EventListener {
     protected String description;
 
     public String getLabel() {
-        return "";
+        return FormatUtils.format(aliases[0]);
     }
 
 }
