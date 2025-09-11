@@ -6,6 +6,7 @@ import pt.saipar.client.api.wrapper.inventory.InventoryWrapper;
 import pt.saipar.client.api.wrapper.network.NetworkManagerWrapper;
 import pt.saipar.client.api.wrapper.render.manager.RenderManagerWrapper;
 import pt.saipar.client.api.wrapper.settings.SettingsWrapper;
+import pt.saipar.client.api.wrapper.ui.screen.ScreenWrapper;
 import pt.saipar.client.api.wrapper.utils.timer.TimerWrapper;
 import pt.saipar.client.api.wrapper.world.WorldWrapper;
 
@@ -24,6 +25,13 @@ public interface Wrapper {
      * @return the {@link SettingsWrapper}
      */
     SettingsWrapper getSettings();
+
+    /**
+     * Gets the current {@link ScreenWrapper}
+     *
+     * @return the current {@link ScreenWrapper}
+     */
+    ScreenWrapper getCurrentScreen();
 
     /**
      * Gets the {@link PlayerWrapper}
@@ -66,6 +74,13 @@ public interface Wrapper {
      * @return the {@link TimerWrapper}
      */
     TimerWrapper getTimer();
+
+    /**
+     * Sets the left click counter
+     *
+     * @param counter value
+     */
+    void setLeftClickCounter(final int counter);
 
     /**
      * Presses the left mouse button
