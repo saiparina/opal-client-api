@@ -113,6 +113,13 @@ public interface EntityWrapper {
     boolean isSneaking();
 
     /**
+     * Whether the {@link EntityWrapper} is on the ground
+     *
+     * @return whether the {@link EntityWrapper} is on the ground
+     */
+    boolean isOnGround();
+
+    /**
      * Gets the {@link EntityWrapper} this {@link EntityWrapper} is riding
      *
      * @return the {@link EntityWrapper} this {@link EntityWrapper} is riding
