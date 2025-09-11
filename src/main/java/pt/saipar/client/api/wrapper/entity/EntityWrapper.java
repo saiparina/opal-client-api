@@ -29,6 +29,13 @@ public interface EntityWrapper {
     int getId();
 
     /**
+     * Gets the amount of ticks this {@link EntityWrapper} has exited
+     *
+     * @return the amount of ticks this {@link EntityWrapper} has exited
+     */
+    long getLivingTicks();
+
+    /**
      * Gets the name of the {@link EntityWrapper}
      *
      * @return the name of the {@link EntityWrapper}
