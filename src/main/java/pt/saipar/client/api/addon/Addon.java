@@ -5,15 +5,19 @@ import lombok.Setter;
 import pt.saipar.client.api.addon.data.AddonData;
 import pt.saipar.client.api.command.Command;
 import pt.saipar.client.api.module.Module;
+import pt.saipar.client.api.nametag.extension.NameTagExtension;
 import pt.saipar.client.api.utils.map.ClassMap;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 @Getter @Setter
 public abstract class Addon {
 
     private final ClassMap<Module> modules = new ClassMap<>();
     private final ClassMap<Command> commands = new ClassMap<>();
+    private final Map<String, NameTagExtension> extensions = new HashMap<>();
 
     private final String name;
 
