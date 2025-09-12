@@ -9,7 +9,7 @@ public interface EntityActionClientPacketWrapper<T> extends PacketWrapper<T> {
      *
      * @param id the new ID
      */
-    void setEntityId(final int id);
+    EntityActionClientPacketWrapper<T> setEntityId(final int id);
 
     /**
      * Gets the ID of the entity
@@ -23,7 +23,7 @@ public interface EntityActionClientPacketWrapper<T> extends PacketWrapper<T> {
      *
      * @param action the {@link Action}
      */
-    void setAction(final Action action);
+    EntityActionClientPacketWrapper<T> setAction(final Action action);
 
     /**
      * Gets the {@link Action} of the {@link PacketWrapper}
