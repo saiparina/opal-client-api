@@ -15,6 +15,8 @@ public interface SettingsWrapper {
 
     KeyBindWrapper getSprintKeyBind();
 
+    KeyBindWrapper getSneakKeyBind();
+
     void setMaxFPS(final int value);
 
     int getMaxFPS();
