@@ -15,8 +15,9 @@ public interface ChatServerPacketWrapper<T> extends PacketWrapper<T> {
     @Getter
     enum Type {
 
+        NONE(-1),
         CHAT(1),
-        ACTION_BAR(1);
+        ACTION_BAR(2);
 
         private final int id;
 
