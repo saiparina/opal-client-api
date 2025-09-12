@@ -26,4 +26,6 @@ public @interface ModuleData {
 
     boolean unreloadable() default false;
 
+    boolean development() default false;
+
 }
