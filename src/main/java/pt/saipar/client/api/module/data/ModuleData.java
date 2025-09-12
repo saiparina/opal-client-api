@@ -24,4 +24,6 @@ public @interface ModuleData {
 
     boolean disableOnLoad() default false;
 
+    boolean unreloadable() default false;
+
 }

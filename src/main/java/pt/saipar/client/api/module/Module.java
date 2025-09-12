@@ -13,6 +13,8 @@ public abstract class Module extends AbstractModule {
 
     private final ModuleCategory category;
     private final boolean hidden;
+    private final boolean disableOnLoad;
+    private final boolean unreloadable;
 
     private boolean enabled;
     private String suffix;
@@ -31,6 +33,8 @@ public abstract class Module extends AbstractModule {
         this.description = data.description();
         this.key = data.key();
         this.hidden = data.hidden();
+        this.disableOnLoad = data.disableOnLoad();
+        this.unreloadable = data.unreloadable();
     }
 
 }
