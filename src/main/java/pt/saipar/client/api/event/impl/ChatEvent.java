@@ -8,4 +8,11 @@ public interface ChatEvent extends Event {
 
     String getMessage();
 
+    interface Send extends ChatEvent {
+    }
+
+    interface Receive extends ChatEvent {
+
+    }
+
 }
