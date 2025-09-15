@@ -10,6 +10,14 @@ public final class Location {
 
     private double x, y, z;
 
+    public Location add(final Location other) {
+        x += other.getX();
+        y += other.getY();
+        z += other.getZ();
+
+        return this;
+    }
+
     public Location subtract(final Location other) {
         x -= other.getX();
         y -= other.getY();
