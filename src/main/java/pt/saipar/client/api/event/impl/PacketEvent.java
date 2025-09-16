@@ -7,7 +7,15 @@ public interface PacketEvent extends Event {
 
     PacketWrapper<?> getPacket();
 
-    interface Handle extends PacketEvent {}
+    interface Handle extends PacketEvent {
+
+        Direction getDirection();
+
+        enum Direction {
+            OUTGOING, INCOMMING
+        }
+
+    }
 
     interface Encode extends PacketEvent {
 
