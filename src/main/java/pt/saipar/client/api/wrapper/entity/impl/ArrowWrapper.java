@@ -6,6 +6,6 @@ public interface ArrowWrapper extends EntityWrapper {
 
     EntityWrapper getShooter();
 
-    boolean isOnGround();
+    boolean hasLanded();
 
 }
