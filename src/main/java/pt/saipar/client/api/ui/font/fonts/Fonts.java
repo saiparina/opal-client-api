@@ -6,6 +6,7 @@ import pt.saipar.client.api.ui.font.renderer.FontRenderer;
 
 @RequiredArgsConstructor
 public enum Fonts {
+    MINECRAFT("minecraft"),
     TAHOMA("tahoma-regular"),
     ROBOTO("roboto-regular"),
     ROBOTO_BOLD("roboto-bold");
