@@ -21,6 +21,13 @@ public interface NetworkManagerWrapper {
     void send(final PacketWrapper<?> packet);
 
     /**
+     * Sends a {@link PacketWrapper} to the server without triggering the client's {@link pt.saipar.client.api.event.impl.PacketEvent}
+     *
+     * @param packet the {@link PacketWrapper}
+     */
+    void sendSilently(final PacketWrapper<?> packet);
+
+    /**
      * Creates a {@link PacketBufferWrapper}
      *
      * @param data the data as an array of bytes
