@@ -21,4 +21,12 @@ public interface NameTagExtension {
      */
     Function<PlayerWrapper, String> getFunction();
 
+    /**
+     * Renders the {@link NameTagExtension}
+     *
+     * @param player the player
+     */
+    default void render(final PlayerWrapper player) {
+    }
+
 }
