@@ -8,6 +8,7 @@ import pt.saipar.client.api.keyboard.manager.KeyboardManager;
 import pt.saipar.client.api.logger.manager.LoggerManager;
 import pt.saipar.client.api.module.manager.ModuleManager;
 import pt.saipar.client.api.nametag.manager.NameTagManager;
+import pt.saipar.client.api.profile.manager.ProfileManager;
 import pt.saipar.client.api.ui.font.FontManager;
 import pt.saipar.client.api.ui.notification.manager.NotificationManager;
 import pt.saipar.client.api.value.manager.ValueManager;
@@ -75,6 +76,11 @@ public interface OpalAPI {
         }
 
         @Override
+        public ProfileManager getProfileManager() {
+            return null;
+        }
+
+        @Override
         public Wrapper getWrapper() {
             return null;
         }
@@ -101,6 +107,8 @@ public interface OpalAPI {
     FriendManager getFriendManager();
 
     NameTagManager getNameTagManager();
+
+    ProfileManager getProfileManager();
 
     Wrapper getWrapper();
 
