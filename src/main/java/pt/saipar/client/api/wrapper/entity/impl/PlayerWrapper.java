@@ -8,4 +8,6 @@ public interface PlayerWrapper extends AbstractLivingEntityWrapper {
 
     ItemWrapper getArmor(final int slot);
 
+    boolean isSleeping();
+
 }
