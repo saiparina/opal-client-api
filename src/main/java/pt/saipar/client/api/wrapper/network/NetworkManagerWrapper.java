@@ -1,9 +1,12 @@
 package pt.saipar.client.api.wrapper.network;
 
 import pt.saipar.client.api.wrapper.network.packet.PacketWrapper;
+import pt.saipar.client.api.wrapper.network.server.Server;
 import pt.saipar.client.api.wrapper.utils.buffer.PacketBufferWrapper;
 
 public interface NetworkManagerWrapper {
+
+    Server getServer();
 
     /**
      * Creates a {@link PacketWrapper} instance
