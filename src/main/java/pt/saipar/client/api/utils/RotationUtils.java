@@ -61,4 +61,16 @@ public final class RotationUtils {
         return value;
     }
 
+    public Location getLookVector(final Rotation rotation) {
+        final float pitchRad = (float) Math.toRadians(rotation.getPitch()),
+                yawRad = (float) Math.toRadians(rotation.getYaw());
+
+        final float cosPitch = (float) Math.cos(pitchRad),
+                sinPitch = (float) Math.sin(pitchRad);
+        final float cosYaw = (float) Math.cos(yawRad),
+                sinYaw = (float) Math.sin(yawRad);
+
+        return new Location(-sinYaw * cosPitch, -sinPitch, cosYaw * cosPitch);
+    }
+
 }

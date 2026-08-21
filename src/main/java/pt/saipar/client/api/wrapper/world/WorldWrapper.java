@@ -41,4 +41,13 @@ public interface WorldWrapper {
      */
     ChunkWrapper getChunk(final int x, final int z);
 
+    /**
+     * Checks if a ray between two {@link Location}s is clear of blocks
+     *
+     * @param start the start {@link Location}
+     * @param end the end {@link Location}
+     * @return whether the ray is clear
+     */
+    boolean rayTrace(final Location start, final Location end);
+
 }

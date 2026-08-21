@@ -2,7 +2,7 @@ package pt.saipar.client.api.wrapper.entity;
 
 import pt.saipar.client.api.utils.location.Location;
 import pt.saipar.client.api.utils.rotation.Rotation;
-
+import pt.saipar.client.api.wrapper.utils.box.BoundingBox;
 public interface EntityWrapper {
 
     /**
@@ -140,5 +140,50 @@ public interface EntityWrapper {
      * @return the distance between the entities
      */
     double getDistance(final EntityWrapper entity);
+
+    /**
+     * Gets the {@link EntityWrapper}'s eye height
+     *
+     * @return the eye height
+     */
+    double getEyeHeight();
+
+    /**
+     * Gets the {@link EntityWrapper}'s eye {@link Location}
+     *
+     * @return the eye {@link Location}
+     */
+    Location getEyeLocation();
+
+    /**
+     * Gets the {@link EntityWrapper}'s {@link BoundingBox}
+     *
+     * @return the {@link BoundingBox}
+     */
+    BoundingBox getBoundingBox();
+
+    /**
+     * Checks if this {@link EntityWrapper} can see the given {@link Location}
+     *
+     * @param location the {@link Location}
+     * @return whether the location is visible
+     */
+    boolean canSee(final Location location);
+
+    /**
+     * Checks if this {@link EntityWrapper} can see the given {@link EntityWrapper}
+     *
+     * @param entity the target {@link EntityWrapper}
+     * @return whether the entity is visible
+     */
+    boolean canSee(final EntityWrapper entity);
+
+    /**
+     * Finds a visible {@link Location} on the given {@link EntityWrapper}'s bounding box
+     *
+     * @param target the target {@link EntityWrapper}
+     * @return the visible {@link Location}, or null if completely obstructed
+     */
+    Location getVisiblePoint(final EntityWrapper target);
 
 }

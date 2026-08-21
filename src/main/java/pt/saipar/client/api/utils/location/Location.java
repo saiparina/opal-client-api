@@ -5,7 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @AllArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 public final class Location {
 
     private double x, y, z;
@@ -34,6 +35,14 @@ public final class Location {
 
     public double length() {
         return Math.sqrt(x * x + y * y + z * z);
+    }
+
+    public double distance(final Location other) {
+        final double deltaX = x - other.getX(),
+                deltaY = y - other.getY(),
+                deltaZ = z - other.getZ();
+
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
     }
 
     public Location clone() {
