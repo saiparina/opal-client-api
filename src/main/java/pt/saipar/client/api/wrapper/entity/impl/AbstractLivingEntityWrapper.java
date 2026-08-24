@@ -15,4 +15,8 @@ public interface AbstractLivingEntityWrapper extends EntityWrapper {
 
     boolean hasEffect(final EffectType type);
 
+    int getHurtTime();
+
+    int getMaxHurtTime();
+
 }
