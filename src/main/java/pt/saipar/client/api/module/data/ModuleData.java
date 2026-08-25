@@ -1,6 +1,6 @@
 package pt.saipar.client.api.module.data;
 
-import pt.saipar.client.api.keyboard.Key;
+import pt.saipar.client.api.input.key.Key;
 import pt.saipar.client.api.module.category.ModuleCategory;
 
 import java.lang.annotation.ElementType;

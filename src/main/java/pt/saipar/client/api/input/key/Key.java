@@ -1,4 +1,4 @@
-package pt.saipar.client.api.keyboard;
+package pt.saipar.client.api.input.key;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
