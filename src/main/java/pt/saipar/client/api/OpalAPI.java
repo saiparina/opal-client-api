@@ -36,7 +36,7 @@ public interface OpalAPI {
         }
 
         @Override
-        public InputManager getKeyboardManager() {
+        public InputManager getInputManager() {
             return null;
         }
 
@@ -92,7 +92,7 @@ public interface OpalAPI {
 
     EventManager getEventManager();
 
-    InputManager getKeyboardManager();
+    InputManager getInputManager();
 
     NotificationManager getNotificationManager();
 
