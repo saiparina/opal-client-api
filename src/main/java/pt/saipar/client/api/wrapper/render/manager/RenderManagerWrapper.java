@@ -20,4 +20,12 @@ public interface RenderManagerWrapper {
      */
     void renderHitbox(final EntityWrapper entity, final Color color);
 
+    /**
+     * Renders an {@link EntityWrapper}'s model with a glow {@link Color}
+     *
+     * @param entity the {@link EntityWrapper}
+     * @param color the {@link Color}
+     */
+    void renderModel(final EntityWrapper entity, final Color color);
+
 }

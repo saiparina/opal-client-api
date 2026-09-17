@@ -6,6 +6,11 @@ plugins {
 group = "pt.saipar.opal"
 version = "1.0-SNAPSHOT"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 repositories {
     mavenCentral()
 }
@@ -20,6 +25,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("maven") {
+            artifactId = "api"
             from(components["java"])
         }
     }
