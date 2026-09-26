@@ -7,9 +7,9 @@ public interface FontRenderer {
     /**
      * Draws a {@link String} at a given position with a given {@link Color}
      *
-     * @param text the text
-     * @param x the x coordinate
-     * @param y the y coordinate
+     * @param text  the text
+     * @param x     the x coordinate
+     * @param y     the y coordinate
      * @param color the {@link Color}
      */
     void drawString(final String text, final double x, double y, final Color color);
@@ -17,9 +17,9 @@ public interface FontRenderer {
     /**
      * Draws a {@link String} at a given position with a given {@link Color}
      *
-     * @param text the text
-     * @param x the x coordinate
-     * @param y the y coordinate
+     * @param text  the text
+     * @param x     the x coordinate
+     * @param y     the y coordinate
      * @param color the {@link Color}
      */
     void drawString(final String text, final int x, int y, final Color color);
@@ -27,9 +27,9 @@ public interface FontRenderer {
     /**
      * Draws a {@link String} with shadow at a given position with a given {@link Color}
      *
-     * @param text the text
-     * @param x the x coordinate
-     * @param y the y coordinate
+     * @param text  the text
+     * @param x     the x coordinate
+     * @param y     the y coordinate
      * @param color the {@link Color}
      */
     void drawStringWithShadow(final String text, final double x, final double y, final Color color);
@@ -37,12 +37,22 @@ public interface FontRenderer {
     /**
      * Draws a {@link String} with shadow at a given position with a given {@link Color}
      *
-     * @param text the text
-     * @param x the x coordinate
-     * @param y the y coordinate
+     * @param text  the text
+     * @param x     the x coordinate
+     * @param y     the y coordinate
      * @param color the {@link Color}
      */
     void drawStringWithShadow(final String text, final int x, final int y, final Color color);
+
+    /**
+     * Draws a block of text
+     *
+     * @param x     the x coordinate
+     * @param y     the start y coordinate
+     * @param color the {@link Color}
+     * @param texts an array of {@link String}s
+     */
+    void drawBlockWithShadow(final int x, final int y, final Color color, final String... texts);
 
     /**
      * Gets the height of the {@link FontRenderer}
