@@ -21,6 +21,8 @@ public interface SettingsWrapper {
 
     KeyBindWrapper getMoveRightKeyBind();
 
+    KeyBindWrapper getJumpKeyBind();
+
     void setMaxFPS(final int value);
 
     int getMaxFPS();
