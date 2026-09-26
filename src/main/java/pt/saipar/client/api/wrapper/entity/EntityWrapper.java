@@ -3,6 +3,7 @@ package pt.saipar.client.api.wrapper.entity;
 import pt.saipar.client.api.utils.location.Location;
 import pt.saipar.client.api.utils.rotation.Rotation;
 import pt.saipar.client.api.wrapper.utils.box.BoundingBox;
+
 public interface EntityWrapper {
 
     /**
@@ -20,6 +21,13 @@ public interface EntityWrapper {
      * @return the casted {@link EntityWrapper}
      */
     <T extends EntityWrapper> T cast(final Class<T> entityClass);
+
+    /**
+     * Whether the {@link EntityWrapper} exists in the world
+     *
+     * @return whether the {@link EntityWrapper} exists
+     */
+    boolean exists();
 
     /**
      * Gets the id of the {@link EntityWrapper}
