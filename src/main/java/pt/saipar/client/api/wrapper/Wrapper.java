@@ -34,6 +34,23 @@ public interface Wrapper {
     ScreenWrapper getCurrentScreen();
 
     /**
+     * Whether the player's inventory screen is open
+     *
+     * @return whether the inventory is open
+     */
+    boolean isInventoryOpen();
+
+    /**
+     * Opens the player's inventory
+     */
+    void openInventory();
+
+    /**
+     * Closes the screen the player has open
+     */
+    void closeScreen();
+
+    /**
      * Gets the {@link PlayerWrapper}
      *
      * @return the {@link PlayerWrapper}
