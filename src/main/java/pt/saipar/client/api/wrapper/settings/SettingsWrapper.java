@@ -17,6 +17,10 @@ public interface SettingsWrapper {
 
     KeyBindWrapper getSneakKeyBind();
 
+    KeyBindWrapper getMoveLeftKeyBind();
+
+    KeyBindWrapper getMoveRightKeyBind();
+
     void setMaxFPS(final int value);
 
     int getMaxFPS();
