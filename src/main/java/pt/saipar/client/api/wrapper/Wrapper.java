@@ -104,4 +104,9 @@ public interface Wrapper {
      */
     void clickMouse();
 
+    /**
+     * Uses the player's held item, as if the use item key was pressed
+     */
+    void useItem();
+
 }
