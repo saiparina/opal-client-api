@@ -6,4 +6,8 @@ public interface ItemWrapper {
 
     String getInternalName();
 
+    int getStackSize();
+
+    boolean isBlock();
+
 }
